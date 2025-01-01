@@ -65,10 +65,10 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::get('career-path-destroy/{id}', [BackendCareerController::class, 'destroy'])->name('admin.career.path.destroy');
 
     //supplier
-    Route::get('supplier-item',[SupplierItemController::class,'index'])->name('admin.supplier.item');
+    Route::get('supplier-item', [SupplierItemController::class, 'index'])->name('admin.supplier.item');
 
     //social activity
-    Route::get('social-activity',[BackendSocialActivityController::class,'index'])->name('admin.social-activity');
+    Route::get('social-activity', [BackendSocialActivityController::class, 'index'])->name('admin.social-activity');
     Route::put('social-activity/{id}', [BackendSocialActivityController::class, 'update'])->name('admin.social-activity.update');
 
 
