@@ -1,0 +1,266 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+    .submenu_area {
+        max-width: 400px;
+    }
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    h2.page_title {
+        font-size: 180%;
+    }
+
+    .top_sidebar nav ul li a {
+        font-weight: 600;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .submenu_area {
+        max-width: 300px;
+    }
+
+    video {
+        height: auto !important;
+    }
+
+    .product_brand.slick-slider .slick-slide {
+        padding: 0 10px;
+    }
+
+    .single_job h4 {
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .single_job p {
+        font-size: 16px;
+    }
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-top ul {
+        gap: 10px !important;
+    }
+
+    .page-banner img {
+        height: auto;
+    }
+
+
+    .about_card_image {
+        display: flex;
+        align-items: center;
+    }
+
+    .about_card_image img {
+        height: auto !important;
+    }
+
+    video {
+        height: auto !important;
+    }
+
+    .information-area .container {
+        gap: 20px !important;
+    }
+
+    .about-area h2 {
+        padding: 40px 0;
+    }
+
+    .product_brand.slick-slider .slick-slide {
+        padding: 0 10px;
+    }
+
+    h2.page_title {
+        font-size: 150%;
+    }
+
+    .single_job h4 {
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .single_job p {
+        font-size: 16px;
+    }
+
+
+
+}
+
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+
+    .header-top ul {
+        display: block !important;
+        text-align: center;
+    }
+
+    .page-banner-content {
+        margin-right: 50px;
+    }
+
+    .header-top ul li a:hover {
+        background: transparent !important;
+        color: #fff !important;
+    }
+
+    .top_sidebar nav ul {
+        margin-bottom: 3px;
+    }
+
+    video {
+        height: auto !important;
+    }
+
+    .information-area .container {
+        gap: 20px !important;
+    }
+
+    .about-area h2 {
+        padding: 40px 0;
+    }
+
+    .product_brand.slick-slider .slick-slide {
+        padding: 0 5px;
+    }
+
+    section.information-area.py-5 {
+        padding: 25px 0 !important;
+        padding-bottom: 30px !important;
+    }
+
+    .page-banner-content h2 {
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+
+    .page-banner-content p {
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    .page-banner-content h2 {
+        padding-left: 20px;
+    }
+
+    .about_card_image {
+        width: 100%;
+        height: auto;
+    }
+
+    .about_card_content {
+        width: 100%;
+    }
+
+    .single_about_card {
+        display: block;
+    }
+
+    .about_card_content::after {
+        width: 0;
+    }
+
+    .about_card_image.single_about_card_revarge {
+        width: 100%;
+    }
+
+    .about_card_content.single_about_card_revarge {
+        width: 100%;
+    }
+
+    .page-banner-content_brand h2 {
+        font-size: 150%;
+    }
+
+    .page-banner-content_brand p {
+        font-size: 100%;
+    }
+
+    h2.page_title.mobile_size {
+        font-size: 150%;
+    }
+
+    h2.page_title {
+        font-size: 150%;
+    }
+
+
+
+    .media-content span {
+        font-size: 22px;
+    }
+
+    .page-banner img {
+        height: auto;
+    }
+
+    .single_job h4 {
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .single_job p {
+        font-size: 16px;
+    }
+
+    section.information-area a {
+        font-size: 12px;
+        padding: 10px 20px !important;
+    }
+
+    ul.mobile_top_header {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .about_card_image.single_about_card_revarge::after {
+        width: 0;
+        left: 0;
+    }
+
+    section.brand_view {
+        margin: 0 !important;
+    }
+
+    .copyright .container {
+        display: block;
+    }
+
+    .copyright .container span {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .single_brand_product img {
+        height: 100px;
+    }
+
+}
+
+@media only screen and (min-width: 420px) and (max-width: 500px) {
+    span.change_country {
+        display: block;
+    }
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 450px
+    }
+
+
+}
