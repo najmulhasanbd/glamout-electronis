@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\CareerController as BackendCareerController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\SocialActivityController as BackendSocialActivityController;
+use App\Http\Controllers\Backend\SupplierItemController;
 use App\Http\Controllers\Frontend\BrouchureController;
 use App\Http\Controllers\Frontend\CareerController;
 use App\Http\Controllers\Frontend\ContactUsController;
@@ -62,6 +63,9 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::get('career-path', [BackendCareerController::class, 'path'])->name('admin.career.path');
     Route::post('career-path/store', [BackendCareerController::class, 'store'])->name('admin.career.path.store');
     Route::get('career-path-destroy/{id}', [BackendCareerController::class, 'destroy'])->name('admin.career.path.destroy');
+
+    //supplier
+    Route::get('supplier-item',[SupplierItemController::class,'index'])->name('admin.supplier.item');
 
     //social activity
     Route::get('social-activity',[BackendSocialActivityController::class,'index'])->name('admin.social-activity');
