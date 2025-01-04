@@ -30,7 +30,29 @@
                             </div>
                         @endif
                         <div class="card p-2">
-                           
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>SL</td>
+                                        <td>Name</td>
+                                        <td>Action</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($data as $item)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $item->name }}</td>
+                                            <td>
+                                                <a href="" class="btn btn-sm btn-success"><i
+                                                        class="fa fa-edit"></i></a>
+                                                <a href="" class="btn btn-sm btn-danger"><i
+                                                        class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                         <!-- /.card -->
                     </div>
