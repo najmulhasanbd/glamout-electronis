@@ -8,8 +8,25 @@ use Illuminate\Http\Request;
 
 class SupplierItemController extends Controller
 {
-    public function index(){
-        $data=SupplierItem::latest()->get();
-        return view('backend.pages.supplier-item.index',compact('data'));
+    public function index()
+    {
+        $data = SupplierItem::latest()->get();
+        return view('backend.pages.supplier-item.index', compact('data'));
     }
+
+    public function store(Request $request)
+    {
+        SupplierItem::insert([
+            'name' => $request->name,
+        ]);
+
+        return redirect()->back()->with('success', 'Supplier Item Insert Successfully.');
+    }
+    
+    public function destroy(SupplierItem $item)
+    {
+        $item->delete();
+        return redirect()->back()->with('success', 'Supplier Item Deleted Successfully.');
+    }
+    
 }
