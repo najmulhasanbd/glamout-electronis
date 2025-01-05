@@ -70,6 +70,7 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::post('supplier-item/store', [SupplierItemController::class, 'store'])->name('admin.supplier.item.store');
 
     Route::get('supplier-list',[SupplierController::class,'supplierList'])->name('admin.supplier.list');
+    Route::delete('supplier-list/destroy/{list}', [SupplierController::class, 'supplierListdestroy'])->name('admin.supplier.list.destroy');
 
 
     Route::post('supplier-item/update/{id}', [SupplierItemController::class, 'update'])->name('admin.supplier.item.update');

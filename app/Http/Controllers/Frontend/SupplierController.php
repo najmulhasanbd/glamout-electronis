@@ -34,4 +34,11 @@ class SupplierController extends Controller
         $data = Supplier::latest()->get();
         return view('backend.pages.supplier.index', compact('data'));
     }
+
+    public function supplierListdestroy(Supplier $list)
+    {
+        $list->delete();
+        return redirect()->back()->with('success', 'Supplier deleted successfully.');
+    }
+    
 }

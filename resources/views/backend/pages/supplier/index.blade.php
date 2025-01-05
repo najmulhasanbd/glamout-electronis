@@ -47,7 +47,7 @@
                                                 <a href="javascript:void(0)" data-toggle="modal"
                                                     data-target="#item{{ $item->id }}" class="btn btn-sm btn-success"><i
                                                         class="fa fa-eye"></i></a>
-                                                <form action="{{ route('admin.supplier.item.destroy', $item->id) }}"
+                                                <form action="{{ route('admin.supplier.list.destroy', $item->id) }}"
                                                     method="POST" style="display: inline;">
                                                     @csrf
                                                     @method('DELETE')
