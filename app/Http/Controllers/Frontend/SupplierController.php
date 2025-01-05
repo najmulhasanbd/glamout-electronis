@@ -31,7 +31,7 @@ class SupplierController extends Controller
 
     public function supplierList()
     {
-        $data = Supplier::with('supplieritem')->latest()->get();
+        $data = Supplier::latest()->get();
         return view('backend.pages.supplier.index', compact('data'));
     }
 }

@@ -42,7 +42,7 @@
                                             <td>{{ $item->f_name }} {{ $item->l_name }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->location }}</td>
-                                            <td>{{ $item->supplieritem->name ?? ''}}</td>
+                                            <td>{{ ucwords($item->supplier_item) }}</td>
                                             <td>
                                                 <a href="javascript:void(0)" data-toggle="modal"
                                                     data-target="#item{{ $item->id }}" class="btn btn-sm btn-success"><i

@@ -9,4 +9,6 @@ class SupplierItem extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+   
 }

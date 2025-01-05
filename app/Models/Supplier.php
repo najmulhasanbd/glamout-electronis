@@ -10,8 +10,6 @@ class Supplier extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function supplieritem()
-    {
-        return $this->belongsTo(SupplierItem::class, 'id');
-    }
+   
+    
 }

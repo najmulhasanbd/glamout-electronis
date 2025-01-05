@@ -269,7 +269,7 @@
                                         class="js-example-basic-single form-control">
                                         <option value="">Select Item</option>
                                         @foreach ($data as $item)
-                                            <option value="{{ $item->id }}">{{ ucwords($item->name) }}</option>
+                                            <option value="{{ $item->name }}">{{ ucwords($item->name) }}</option>
                                         @endforeach
                                     </select>
                                 </div>
