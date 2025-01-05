@@ -68,7 +68,7 @@
                                             <td>{{ $item->name }}</td>
                                             <td>
                                                 <a href="javascript:void(0)" data-toggle="modal"
-                                                    data-target="#updateSupplierItem" class="btn btn-sm btn-success"><i
+                                                    data-target="#item{{ $item->id }}" class="btn btn-sm btn-success"><i
                                                         class="fa fa-edit"></i></a>
                                                 <form action="{{ route('admin.supplier.item.destroy', $item->id) }}"
                                                     method="POST" style="display: inline;">
@@ -83,7 +83,7 @@
                                         </tr>
 
                                         <!-- Modal -->
-                                        <div class="modal fade" id="updateSupplierItem" tabindex="-1"
+                                        <div class="modal fade" id="item{{ $item->id }}" tabindex="-1"
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -96,13 +96,13 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form action="{{ route('admin.supplier.item.store') }}"
+                                                        <form action="{{ route('admin.supplier.item.update',$item->id) }}"
                                                             method="post">
                                                             @csrf
                                                             <div class="form-group">
                                                                 <label for="name">Supplier Item</label>
                                                                 <input type="text" name="name" required
-                                                                    class="form-control" placeholder="enter name">
+                                                                    class="form-control" value="{{ $item->name }}">
                                                             </div>
                                                             <button type="submit" class="btn btn-success">Update</button>
                                                         </form>

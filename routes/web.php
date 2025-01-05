@@ -67,6 +67,9 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     //supplier
     Route::get('supplier-item', [SupplierItemController::class, 'index'])->name('admin.supplier.item');
     Route::post('supplier-item/store', [SupplierItemController::class, 'store'])->name('admin.supplier.item.store');
+
+    Route::post('supplier-item/update/{id}', [SupplierItemController::class, 'update'])->name('admin.supplier.item.update');
+
     Route::delete('supplier-item/destroy/{item}', [SupplierItemController::class, 'destroy'])->name('admin.supplier.item.destroy');
 
     //social activity

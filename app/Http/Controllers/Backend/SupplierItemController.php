@@ -22,11 +22,18 @@ class SupplierItemController extends Controller
 
         return redirect()->back()->with('success', 'Supplier Item Insert Successfully.');
     }
-    
+
+    public function update(Request $request, $id)
+    {
+        SupplierItem::findOrFail($id)->update([
+            'name' => $request->name,
+        ]);
+        return redirect()->back()->with('success', 'Supplier Item Update Successfully.');
+    }
+
     public function destroy(SupplierItem $item)
     {
         $item->delete();
         return redirect()->back()->with('success', 'Supplier Item Deleted Successfully.');
     }
-    
 }
