@@ -22,6 +22,7 @@ Route::get('/', [FrontendController::class, 'home'])->name('frontend.home');
 
 Route::get('media', [FrontendController::class, 'mediaPage'])->name('media.page');
 Route::get('supplier', [SupplierController::class, 'supplierPage'])->name('supplier.page');
+Route::post('supplier/store', [SupplierController::class, 'store'])->name('supplier.store');
 
 Route::get('social-activity', [SocialActivityController::class, 'socialActivity'])->name('social.activity.page');
 
@@ -67,6 +68,9 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     //supplier
     Route::get('supplier-item', [SupplierItemController::class, 'index'])->name('admin.supplier.item');
     Route::post('supplier-item/store', [SupplierItemController::class, 'store'])->name('admin.supplier.item.store');
+
+    Route::get('supplier-list',[SupplierController::class,'supplierList'])->name('admin.supplier.list');
+
 
     Route::post('supplier-item/update/{id}', [SupplierItemController::class, 'update'])->name('admin.supplier.item.update');
 

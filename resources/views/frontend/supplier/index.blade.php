@@ -51,17 +51,25 @@
             <div class="media-content">
                 <h2 class="page_title"><span>Supplier </span></h2>
             </div>
+
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-12">
                     <div class="platform-content">
                         <p class="py-5">Elevate your business with PRAN Group's vast network and global reach. Reach out
                             now to explore new horizons in the realm of quality products.</p>
 
-                        <form action="" method="get">
+                        @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        <form action="{{ route('supplier.store') }}" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="form-group">
                                     <label for="location"><b>Your Location</b></label>
-                                    <select class="js-example-basic-single form-control" name="location">
+                                    <select class="js-example-basic-single form-control" required name="location">
                                         <option value="afghanistan">Afghanistan</option>
                                         <option value="albania">Albania</option>
                                         <option value="algeria">Algeria</option>
@@ -257,31 +265,31 @@
                                 </div>
                                 <div class="form-group mt-2">
                                     <label for="supplier_item"><b>Supplier Item</b></label>
-                                    <select name="supplier_item" id="supplier_item"
+                                    <select name="supplier_item" required id="supplier_item"
                                         class="js-example-basic-single form-control">
-                                        <option hidden value="">Select Item</option>
-                                        <option value="">item one</option>
-                                        <option value="">item two</option>
-                                        <option value="">item three</option>
+                                        <option value="">Select Item</option>
+                                        @foreach ($data as $item)
+                                            <option value="{{ $item->id }}">{{ ucwords($item->name) }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group mt-2">
                                     <label for="f_name"><b>First Name / initials</b></label>
-                                    <input type="text" name="f_name" class="form-control"
+                                    <input type="text" name="f_name" class="form-control" required
                                         placeholder="enter first name">
                                 </div>
                                 <div class="form-group mt-2">
                                     <label for="l_name"><b>Last Name</b></label>
-                                    <input type="text" name="l_name" class="form-control"
+                                    <input type="text" name="l_name" class="form-control" required
                                         placeholder="enter last name">
                                 </div>
                                 <div class="form-group mt-2">
-                                    <label for="l_name"><b>Email address</b></label>
-                                    <input type="text" name="l_name" class="form-control"
+                                    <label for="email"><b>Email address</b></label>
+                                    <input type="email" name="email" class="form-control" required
                                         placeholder="enter last name">
                                 </div>
                                 <div class="form-group mt-2">
-                                    <label for="l_name"><b>Your message</b></label>
+                                    <label for="message"><b>Your message</b></label>
                                     <textarea name="message" id="message" class="form-control" placeholder="Your Message" rows="3"></textarea>
                                 </div>
                                 <div class="w-auto">

@@ -87,7 +87,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('admin.supplier.list')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Supplier List</p>
                             </a>
